@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курс по Reels — Преврати блог в источник дохода</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
             --primary: #FF6B6B;
@@ -12,6 +13,7 @@
             --light: #F7FFF7;
             --accent: #FFE66D;
             --gray: #95A5A6;
+            --telegram: #0088cc;
         }
         * {
             margin: 0; padding: 0; box-sizing: border-box;
@@ -53,7 +55,7 @@
             max-width: 800px; margin: 0 auto;
         }
 
-        /* Списки с дефисами — без наползания */
+        /* Списки с дефисами */
         ul {
             list-style-type: none;
             padding-left: 0;
@@ -155,6 +157,34 @@
             color: white; border: none; border-radius: 50px;
             font-size: 1.1rem; font-weight: bold; cursor: pointer;
         }
+
+        /* Кнопка Telegram */
+        .telegram-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--telegram);
+            color: white;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 20px auto 0;
+            box-shadow: 0 4px 12px rgba(0,136,204,0.3);
+            transition: all 0.3s ease;
+            max-width: 300px;
+        }
+        .telegram-button:hover {
+            background: #0077b5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,136,204,0.4);
+        }
+        .telegram-button i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
         footer {
             text-align: center; padding: 20px; color: var(--gray);
             font-size: 0.9rem;
@@ -166,6 +196,10 @@
             .program-week { padding: 20px; }
             .plan { padding: 25px; }
             .plan-price { font-size: 1.8rem; }
+            .telegram-button {
+                width: 90%;
+                max-width: none;
+            }
         }
     </style>
 </head>
@@ -309,6 +343,11 @@
                     <input type="hidden" name="tariff" id="selectedTariff" value="">
                     <button type="submit">Отправить заявку</button>
                 </form>
+
+                <!-- КНОПКА TELEGRAM -->
+                <a href="https://t.me/ваш_ник" target="_blank" class="telegram-button">
+                    <i class="fab fa-telegram-plane"></i>Написать в Telegram
+                </a>
             </div>
         </div>
     </section>
